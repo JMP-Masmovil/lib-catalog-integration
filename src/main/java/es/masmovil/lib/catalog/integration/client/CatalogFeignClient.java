@@ -12,8 +12,6 @@ import es.masmovil.lib.catalog.integration.PhoneRSDTO;
 
 @ConditionalOnProperty(name = "api.ms.url.phonecatalog" )
 @FeignClient(name="catalog", url="${api.ms.url.phonecatalog}", decode404 = true)
-
-
 public interface CatalogFeignClient {
 
 	@GetMapping(value = "/phones")
